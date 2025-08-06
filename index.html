@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công Cụ Tài Xỉu</title>
+    <title>TOOLS TÀI XỈU BEVIS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -814,109 +814,6 @@
             background-color: #00e68a;
         }
         
-        .game-frame {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Admin Panel */
-        .admin-panel {
-            display: none;
-            background-color: var(--panel-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .admin-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-align: center;
-        }
-        
-        .admin-section {
-            margin-bottom: 30px;
-        }
-        
-        .section-title {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 5px;
-        }
-        
-        .admin-controls {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .admin-input {
-            flex: 1;
-            min-width: 200px;
-            padding: 10px;
-            background-color: var(--darker-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            color: var(--text-color);
-        }
-        
-        .admin-btn {
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .admin-btn:hover {
-            background-color: #00e68a;
-            transform: translateY(-2px);
-        }
-        
-        .keys-list {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        .keys-list th, .keys-list td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .keys-list th {
-            background-color: rgba(0, 255, 157, 0.1);
-            color: var(--primary-color);
-        }
-        
-        .keys-list tr:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        
-        .delete-btn {
-            background-color: #F44336;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        
         /* Notification */
         .notification {
             position: fixed;
@@ -1090,33 +987,34 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-        /* Tool V3 */
-        .game-selector {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+        /* Cursor Effects */
+        .cursor-effect {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(0, 255, 157, 0.5);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            mix-blend-mode: screen;
+            animation: cursorPulse 1.5s infinite;
         }
         
-        .game-option {
-            padding: 12px 20px;
-            background-color: var(--darker-bg);
-            border: 1px solid var(--primary-color);
-            color: var(--text-color);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
+        @keyframes cursorPulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.5; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
         }
         
-        .game-option.active {
-            background-color: var(--primary-color);
-            color: #000;
-        }
-        
-        .game-option:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+        /* Copyright */
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
         }
         
         /* Responsive */
@@ -1173,36 +1071,6 @@
                 display: none;
             }
         }
-        
-        /* Cursor Effects */
-        .cursor-effect {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: rgba(0, 255, 157, 0.5);
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            mix-blend-mode: screen;
-            animation: cursorPulse 1.5s infinite;
-        }
-        
-        @keyframes cursorPulse {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.5; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        }
-        
-        /* Copyright */
-        .copyright {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
@@ -1247,46 +1115,10 @@
             </div>
         </div>
         
-        <!-- Admin Panel -->
-        <div class="admin-panel" id="admin-panel">
-            <h2 class="admin-title">ADMIN CONTROL PANEL</h2>
-            
-            <div class="admin-section">
-                <h3 class="section-title">Quản lý Key</h3>
-                <div class="admin-controls">
-                    <input type="text" class="admin-input" id="new-key-input" placeholder="Nhập key mới">
-                    <input type="number" class="admin-input" id="key-usage-input" placeholder="Số lần sử dụng">
-                    <input type="number" class="admin-input" id="key-duration-input" placeholder="Thời gian (phút)">
-                    <button class="admin-btn" id="create-key-btn">Tạo Key</button>
-                </div>
-                
-                <div class="admin-controls">
-                    <label style="color: white;">
-                        <input type="checkbox" id="free-access-checkbox"> Mở quyền truy cập free
-                    </label>
-                </div>
-                
-                <table class="keys-list">
-                    <thead>
-                        <tr>
-                            <th>Key</th>
-                            <th>Số lần sử dụng</th>
-                            <th>Thời gian còn lại</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody id="keys-list-body">
-                        <!-- Keys will be inserted here -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
         <!-- Tool Selector -->
         <div class="tool-selector">
             <button class="tool-btn active" data-tool="toolv1">Tool V1</button>
             <button class="tool-btn" data-tool="toolv2">Tool V2</button>
-            <button class="tool-btn" data-tool="toolv3">Tool V3</button>
         </div>
         
         <!-- Tool V1 Container -->
@@ -1367,45 +1199,9 @@
             </div>
         </div>
         
-        <!-- Tool V3 Container -->
-        <div class="tool-container" id="toolv3">
-            <h2 class="tool-title">BOT TÀI XỈU TỰ ĐỘNG TRONG GAME</h2>
-            
-            <div class="game-selector">
-                <button class="game-option active" data-game="sunwin">Sun Win</button>
-                <button class="game-option" data-game="hitclub">Hit Club</button>
-                <button class="game-option" data-game="68gb">68GB</button>
-            </div>
-            
-            <button class="submit-btn" id="start-game-btn">BẮT ĐẦU BOT</button>
-            
-            <div id="game-container" style="display: none;">
-                <iframe src="" class="game-frame" id="game-frame"></iframe>
-                
-                <div class="bot-container">
-                    <div class="bot-header">
-                        <div class="bot-avatar">
-                            <img src="https://media.istockphoto.com/id/1445426863/vector/chat-bot-vector-logo-design-concept.jpg?s=612x612&w=0&k=20&c=XDdfzS4lNW9yxQ0BQGZq9KMLL4bJ8ywXlYdAhBSuoCA=" alt="Bot Avatar">
-                        </div>
-                        <div class="bot-name">Auto TaiXiu Bot</div>
-                        <div class="bot-status">Đang chờ</div>
-                    </div>
-                    
-                    <div class="bot-messages" id="auto-bot-messages">
-                        <div class="message">
-                            <div class="bot-message">
-                                Bot sẽ tự động phân tích kết quả từ game và đưa ra dự đoán mỗi 50 giây.
-                                <div class="message-time">Bây giờ</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Copyright -->
         <div class="copyright">
-            <p>© 2023 TAI XIU TOOL | Created by <strong>@bevis1312</strong></p>
+            <p>© 20252025 TAI XIU TOOL | Created by <strong>@bevis1312</strong></p>
         </div>
     </div>
     
@@ -1545,152 +1341,13 @@
         const userAvatar = document.getElementById('user-avatar');
         const usernameDisplay = document.getElementById('username-display');
         const logoutBtn = document.getElementById('logout-btn');
-        const adminPanel = document.getElementById('admin-panel');
         
         // Key management
         const ADMIN_KEY = 'bevis';
         const FREE_KEY = 'freekey';
-        let freeAccessEnabled = false;
-        let keys = JSON.parse(localStorage.getItem('taiXiuKeys')) || [];
-        let users = JSON.parse(localStorage.getItem('taiXiuUsers')) || {};
+        let freeAccessEnabled = true; // Free access always enabled in this version
         let currentUser = null;
-        
-        // Initialize keys if empty
-        if (keys.length === 0) {
-            keys.push({
-                key: ADMIN_KEY,
-                usageLimit: 1,
-                remainingUsage: 1,
-                duration: 0, // 0 means unlimited
-                createdAt: new Date().toISOString(),
-                isAdmin: true
-            });
-            
-            keys.push({
-                key: FREE_KEY,
-                usageLimit: 1000,
-                remainingUsage: 1000,
-                duration: 0,
-                createdAt: new Date().toISOString(),
-                isAdmin: false
-            });
-            
-            localStorage.setItem('taiXiuKeys', JSON.stringify(keys));
-        }
-        
-        // Check if free access is enabled
-        if (localStorage.getItem('freeAccessEnabled')) {
-            freeAccessEnabled = localStorage.getItem('freeAccessEnabled') === 'true';
-        }
-        
-        // Admin controls
-        const newKeyInput = document.getElementById('new-key-input');
-        const keyUsageInput = document.getElementById('key-usage-input');
-        const keyDurationInput = document.getElementById('key-duration-input');
-        const createKeyBtn = document.getElementById('create-key-btn');
-        const freeAccessCheckbox = document.getElementById('free-access-checkbox');
-        const keysListBody = document.getElementById('keys-list-body');
-        
-        freeAccessCheckbox.checked = freeAccessEnabled;
-        
-        freeAccessCheckbox.addEventListener('change', () => {
-            freeAccessEnabled = freeAccessCheckbox.checked;
-            localStorage.setItem('freeAccessEnabled', freeAccessEnabled);
-            showNotification('Thông báo', `Quyền truy cập free đã được ${freeAccessEnabled ? 'mở' : 'đóng'}`, 'success');
-        });
-        
-        createKeyBtn.addEventListener('click', () => {
-            const key = newKeyInput.value.trim();
-            const usageLimit = parseInt(keyUsageInput.value);
-            const duration = parseInt(keyDurationInput.value);
-            
-            if (!key) {
-                showNotification('Lỗi', 'Vui lòng nhập key', 'error');
-                return;
-            }
-            
-            if (isNaN(usageLimit) || usageLimit <= 0) {
-                showNotification('Lỗi', 'Vui lòng nhập số lần sử dụng hợp lệ', 'error');
-                return;
-            }
-            
-            if (isNaN(duration) || duration < 0) {
-                showNotification('Lỗi', 'Vui lòng nhập thời gian hợp lệ', 'error');
-                return;
-            }
-            
-            // Check if key already exists
-            if (keys.some(k => k.key === key)) {
-                showNotification('Lỗi', 'Key đã tồn tại', 'error');
-                return;
-            }
-            
-            // Add new key
-            keys.push({
-                key,
-                usageLimit,
-                remainingUsage: usageLimit,
-                duration,
-                createdAt: new Date().toISOString(),
-                isAdmin: false
-            });
-            
-            localStorage.setItem('taiXiuKeys', JSON.stringify(keys));
-            renderKeysList();
-            
-            newKeyInput.value = '';
-            keyUsageInput.value = '';
-            keyDurationInput.value = '';
-            
-            showNotification('Thành công', 'Key đã được tạo', 'success');
-        });
-        
-        function renderKeysList() {
-            keysListBody.innerHTML = '';
-            
-            keys.forEach((keyObj, index) => {
-                if (keyObj.key === ADMIN_KEY) return; // Don't show admin key
-                
-                const row = document.createElement('tr');
-                
-                // Calculate remaining time
-                let remainingTime = 'Vô thời hạn';
-                if (keyObj.duration > 0) {
-                    const createdAt = new Date(keyObj.createdAt);
-                    const expiresAt = new Date(createdAt.getTime() + keyObj.duration * 60000);
-                    const now = new Date();
-                    
-                    if (now > expiresAt) {
-                        remainingTime = 'Hết hạn';
-                    } else {
-                        const diff = expiresAt - now;
-                        const hours = Math.floor(diff / (1000 * 60 * 60));
-                        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                        remainingTime = `${hours}h ${minutes}m`;
-                    }
-                }
-                
-                row.innerHTML = `
-                    <td>${keyObj.key}</td>
-                    <td>${keyObj.remainingUsage}/${keyObj.usageLimit}</td>
-                    <td>${remainingTime}</td>
-                    <td><button class="delete-btn" data-index="${index}">Xóa</button></td>
-                `;
-                
-                keysListBody.appendChild(row);
-            });
-            
-            // Add event listeners to delete buttons
-            document.querySelectorAll('.delete-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const index = parseInt(e.target.getAttribute('data-index'));
-                    keys.splice(index, 1);
-                    localStorage.setItem('taiXiuKeys', JSON.stringify(keys));
-                    renderKeysList();
-                    showNotification('Thành công', 'Key đã được xóa', 'success');
-                });
-            });
-        }
+        let users = JSON.parse(localStorage.getItem('taiXiuUsers')) || {};
         
         // Login function
         loginBtn.addEventListener('click', () => {
@@ -1702,19 +1359,10 @@
             }
             
             // Check if key is valid
-            const keyObj = keys.find(k => k.key === key);
             const isAdmin = key === ADMIN_KEY;
             const isFreeKey = key === FREE_KEY;
             
-            if (isAdmin || (keyObj && (keyObj.remainingUsage > 0 || keyObj.usageLimit === 0)) || (isFreeKey && freeAccessEnabled)) {
-                // For non-admin keys, decrease remaining usage
-                if (keyObj && !isAdmin) {
-                    if (keyObj.remainingUsage > 0) {
-                        keyObj.remainingUsage--;
-                        localStorage.setItem('taiXiuKeys', JSON.stringify(keys));
-                    }
-                }
-                
+            if (isAdmin || isFreeKey) {
                 // Show mission for non-admin keys
                 if (!isAdmin) {
                     missionContainer.style.display = 'block';
@@ -1726,10 +1374,8 @@
                 }
                 
                 showNotification('Thành công', 'Key hợp lệ', 'success');
-            } else if (isFreeKey && !freeAccessEnabled) {
-                showNotification('Lỗi', 'Quyền truy cập free đang bị đóng', 'error');
             } else {
-                showNotification('Lỗi', 'Key không hợp lệ hoặc đã hết hạn', 'error');
+                showNotification('Lỗi', 'Key không hợp lệ', 'error');
             }
         });
         
@@ -1779,11 +1425,6 @@
             
             currentUser.nickname = nickname;
             
-            // Initialize user stats if not exists
-            if (!localStorage.getItem('userStats')) {
-                localStorage.setItem('userStats', JSON.stringify({}));
-            }
-            
             nicknameModal.style.display = 'none';
             loginContainer.style.display = 'none';
             appContainer.style.display = 'block';
@@ -1791,12 +1432,6 @@
             // Update UI
             userAvatar.textContent = nickname.charAt(0).toUpperCase();
             usernameDisplay.textContent = nickname;
-            
-            // Show admin panel if admin
-            if (currentUser.isAdmin) {
-                adminPanel.style.display = 'block';
-                renderKeysList();
-            }
             
             // Show notification
             setTimeout(() => {
@@ -2169,112 +1804,6 @@
             renderHistory();
             historyModal.style.display = 'flex';
         });
-        
-        // Tool V3 functionality
-        const startGameBtn = document.getElementById('start-game-btn');
-        const gameContainer = document.getElementById('game-container');
-        const gameFrame = document.getElementById('game-frame');
-        const autoBotMessages = document.getElementById('auto-bot-messages');
-        const gameOptions = document.querySelectorAll('.game-option');
-        
-        let currentGame = 'sunwin';
-        let botInterval = null;
-        
-        // Game selection
-        gameOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                gameOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-                currentGame = option.getAttribute('data-game');
-            });
-        });
-        
-        startGameBtn.addEventListener('click', () => {
-            // Set game URL based on selection
-            let gameUrl = '';
-            switch (currentGame) {
-                case 'sunwin':
-                    gameUrl = 'https://sun.win/';
-                    break;
-                case 'hitclub':
-                    gameUrl = 'https://hit.club/';
-                    break;
-                case '68gb':
-                    gameUrl = 'https://68gbvn25.biz/';
-                    break;
-            }
-            
-            gameFrame.src = gameUrl;
-            gameContainer.style.display = 'block';
-            startGameBtn.style.display = 'none';
-            
-            // Start bot
-            startAutoBot();
-        });
-        
-        function startAutoBot() {
-            // Clear previous interval if exists
-            if (botInterval) {
-                clearInterval(botInterval);
-            }
-            
-            // Add initial message
-            addAutoBotMessage('Bot đã bắt đầu phân tích game. Tự động dự đoán mỗi 50 giây.');
-            
-            // Start interval
-            botInterval = setInterval(() => {
-                // Simulate getting dice results from game
-                const dice1 = Math.floor(Math.random() * 6) + 1;
-                const dice2 = Math.floor(Math.random() * 6) + 1;
-                const dice3 = Math.floor(Math.random() * 6) + 1;
-                
-                // Analyze
-                const sum = dice1 + dice2 + dice3;
-                const isTai = sum > 10;
-                const winProbability = calculateTaiXiuProbability(dice1, dice2, dice3);
-                const nextDicePrediction = predictNextDice(!isTai);
-                
-                // Send prediction
-                if (!isTai) {
-                    addAutoBotMessage(`Dự đoán: <span class="tai">TÀI</span> (Tỉ lệ thắng: ${winProbability}%)`);
-                    addAutoBotMessage(`Dự đoán vị: <span class="tai">Tài: ${nextDicePrediction.values.join(', ')}</span>`);
-                } else {
-                    addAutoBotMessage(`Dự đoán: <span class="xiu">XỈU</span> (Tỉ lệ thắng: ${winProbability}%)`);
-                    addAutoBotMessage(`Dự đoán vị: <span class="xiu">Xỉu: ${nextDicePrediction.values.join(', ')}</span>`);
-                }
-                
-                // Add to history
-                gameHistory.push({
-                    dice: [dice1, dice2, dice3],
-                    prediction: !isTai ? 'TÀI' : 'XỈU',
-                    position: nextDicePrediction.values,
-                    winProbability,
-                    timestamp: new Date().toLocaleString(),
-                    fromAutoBot: true
-                });
-                
-                localStorage.setItem('taiXiuGameHistory', JSON.stringify(gameHistory));
-                
-            }, 50000); // 50 seconds
-        }
-        
-        function addAutoBotMessage(text) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message';
-            
-            const now = new Date();
-            const timeString = now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
-            
-            messageDiv.innerHTML = `
-                <div class="bot-message">
-                    ${text}
-                    <div class="message-time">${timeString}</div>
-                </div>
-            `;
-            
-            autoBotMessages.appendChild(messageDiv);
-            autoBotMessages.scrollTop = autoBotMessages.scrollHeight;
-        }
         
         // Initialize
         if (localStorage.getItem('taiXiuGameHistory')) {
