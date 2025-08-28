@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công Cụ Tài Xỉu - Trang Chủ</title>
+    <title> Bevis Tool Tx - Home Side</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -2262,11 +2262,11 @@
             
             // Bet suggestion
             if (winProbability >= 75) {
-                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược cao (5-10% số dư)`;
+                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược cao (70% số dư)`;
             } else if (winProbability >= 65) {
-                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược trung bình (2-5% số dư)`;
+                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược trung bình (50% số dư)`;
             } else {
-                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược thấp (1-2% số dư) hoặc bỏ qua ván này`;
+                betSuggestion.innerHTML = `<strong>Gợi ý đặt cược:</strong> Nên đặt mức cược thấp (20% số dư) hoặc bỏ qua ván này`;
             }
             
             // Show next dice prediction
@@ -2508,7 +2508,7 @@
             try {
                 addChatbotMessage('Đang lấy dữ liệu từ API...');
                 
-                const response = await fetch('https://six8vip-okhx.onrender.com/myapi/taixiu/history');
+                const response = await fetch('gắn api vào đây, đang kh có api nên đ gắn được');
                 const data = await response.json();
                 
                 if (data && data.data && data.data.length > 0) {
